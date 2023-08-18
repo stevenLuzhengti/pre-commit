@@ -1,0 +1,22 @@
+---
+name: Linting
+
+on:
+  push:
+    branches:
+      - development
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  #---------------------------------------------------------------------
+  # this task will check if the PR passes the pre-commit
+  #---------------------------------------------------------------------
+  pre-commit:
+    name: linux / pre-commit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - uses: pre-commit/action@v2.0.0
