@@ -25,7 +25,7 @@ Minimalistic template for research in Python. Linters, code format, PEP8.
 2. Install pre-commit hook:
 
 ```bash
-    pip install pre-commit black flake8 isort
+    pip install pre-commit black flake8 isort pyupgrade
 ```
 
 3. Initialize it from the folder within the repo:
